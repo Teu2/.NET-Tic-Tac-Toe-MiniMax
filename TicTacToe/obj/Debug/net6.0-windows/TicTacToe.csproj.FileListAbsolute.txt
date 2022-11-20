@@ -1,0 +1,42 @@
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.exe
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.deps.json
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.runtimeconfig.json
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.dll
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.pdb
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.csproj.AssemblyReference.cache
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\App.g.cs
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe_MarkupCompile.cache
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe_MarkupCompile.lref
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\MainWindow.baml
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.g.resources
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.AssemblyInfoInputs.cache
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.AssemblyInfo.cs
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.csproj.CoreCompileInputs.cache
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.dll
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\refint\TicTacToe.dll
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.pdb
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.genruntimeconfig.cache
+D:\Comp Sci\Programming\C#\Data structures and Algorithms\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\ref\TicTacToe.dll
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.exe
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.deps.json
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.runtimeconfig.json
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.dll
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\bin\Debug\net6.0-windows\TicTacToe.pdb
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.csproj.AssemblyReference.cache
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\App.g.cs
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe_MarkupCompile.cache
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe_MarkupCompile.lref
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\MainWindow.baml
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.g.resources
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.AssemblyInfoInputs.cache
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.AssemblyInfo.cs
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.csproj.CoreCompileInputs.cache
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.dll
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\refint\TicTacToe.dll
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.pdb
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\TicTacToe.genruntimeconfig.cache
+D:\Comp Sci\Programming\C#\TicTacToe\TicTacToe\obj\Debug\net6.0-windows\ref\TicTacToe.dll

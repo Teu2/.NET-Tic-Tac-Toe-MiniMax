@@ -1,0 +1,2 @@
+﻿add MiniMax algorithm
+https://youtu.be/mnTyiUAHuVk?t=2736
