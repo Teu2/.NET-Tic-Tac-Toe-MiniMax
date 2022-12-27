@@ -15,30 +15,92 @@
             <Setter Property="FontSize" Value="70"/>
         </Style>
     </Window.Resources>
-    
-    <Grid x:Name="Container">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
 
-        <Button Click="Button_Click" x:Name="Button0_0" Grid.Column="0"/>
-        <Button Click="Button_Click" x:Name="Button1_0" Grid.Column="1"/>
-        <Button Click="Button_Click" x:Name="Button2_0" Grid.Column="2"/>
+    <Grid>
+        <Grid x:Name="Container">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <Button Click="Button_Click" x:Name="Button0_1" Grid.Column="0" Grid.Row="1"/>
-        <Button Click="Button_Click" x:Name="Button1_1" Grid.Column="1" Grid.Row="1"/>
-        <Button Click="Button_Click" x:Name="Button2_1" Grid.Column="2" Grid.Row="1"/>
-                 
-        <Button Click="Button_Click" x:Name="Button0_2" Grid.Column="0" Grid.Row="2"/>
-        <Button Click="Button_Click" x:Name="Button1_2" Grid.Column="1" Grid.Row="2"/>
-        <Button Click="Button_Click" x:Name="Button2_2" Grid.Column="2" Grid.Row="2"/>
+            <Button Click="Button_Click" x:Name="Button0_0" Grid.Column="0"/>
+            <Button Click="Button_Click" x:Name="Button1_0" Grid.Column="1"/>
+            <Button Click="Button_Click" x:Name="Button2_0" Grid.Column="2"/>
+
+            <Button Click="Button_Click" x:Name="Button0_1" Grid.Column="0" Grid.Row="1"/>
+            <Button Click="Button_Click" x:Name="Button1_1" Grid.Column="1" Grid.Row="1"/>
+            <Button Click="Button_Click" x:Name="Button2_1" Grid.Column="2" Grid.Row="1"/>
+
+            <Button Click="Button_Click" x:Name="Button0_2" Grid.Column="0" Grid.Row="2"/>
+            <Button Click="Button_Click" x:Name="Button1_2" Grid.Column="1" Grid.Row="2"/>
+            <Button Click="Button_Click" x:Name="Button2_2" Grid.Column="2" Grid.Row="2"/>
+        </Grid>
+
+        <Label x:Name="midLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="0,235,0,0"/>
+        <Label x:Name="botLine" Visibility="Visible" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="0,385,0,0"/>
+        <Label x:Name="topLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="0,74,0,0"/>
+        <Label x:Name="leftColLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" Width="6" Height="402" Background="Black" Margin="79,0,0,0" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="midColLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="6" Height="402" Background="Black" Margin="244,38,0,0" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="rightColLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="6" Height="402" Background="Black" Margin="400,38,0,0" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+        <Grid/>
+        <Label x:Name="diagLine1" Visibility="Visible" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="528" Height="7" Background="Black" Margin="-31,234,0,0" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-44.198"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="diagLine2" Visibility="Hidden" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Width="528" Height="7" Background="Black" Margin="0,234,0,0" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-136.048"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
 
     </Grid>
+
+
+
 </Window>

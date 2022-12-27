@@ -1,2 +1,2 @@
 ﻿add MiniMax algorithm
-https://youtu.be/mnTyiUAHuVk?t=2736
+https://www.youtube.com/watch?v=l-hh51ncgDI&t=5s&ab_channel=SebastianLague
