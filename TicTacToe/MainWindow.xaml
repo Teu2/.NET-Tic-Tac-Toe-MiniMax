@@ -80,7 +80,10 @@
             </Label.RenderTransform>
         </Label>
 
-        <Grid Grid.ColumnSpan="2"/>
+        <Grid Grid.ColumnSpan="2">
+            <!--<Button x:Name="easyButton" Visibility="Hidden" Content=" EASY AI " HorizontalAlignment="Left" Margin="41,0,0,0" VerticalAlignment="Center" Background="#FF68CC54" Foreground="White" FontFamily="Arial Black" FontSize="36" Click="Button_Click_1"/>-->
+            <!--<Button x:Name="hardButton" Visibility="Hidden" Content=" HARD AI " HorizontalAlignment="Left" Margin="256,0,0,0" VerticalAlignment="Center" Background="#FFD23F3F" Foreground="White" FontFamily="Arial Black" FontSize="36" Click="hardButton_Click"/>-->
+        </Grid>
         <Label x:Name="diagLine1" Visibility="Visible" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="528" Height="7" Background="Black" Margin="-31,234,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
