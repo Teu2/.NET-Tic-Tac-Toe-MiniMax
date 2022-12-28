@@ -17,7 +17,11 @@
     </Window.Resources>
 
     <Grid>
-        <Grid x:Name="Container">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="Container" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -42,9 +46,9 @@
             <Button Click="Button_Click" x:Name="Button2_2" Grid.Column="2" Grid.Row="2"/>
         </Grid>
 
-        <Label x:Name="midLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="0,235,0,0"/>
-        <Label x:Name="botLine" Visibility="Visible" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="0,385,0,0"/>
-        <Label x:Name="topLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="0,74,0,0"/>
+        <Label x:Name="midLine" Visibility="Visible" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="38,235,0,0" Grid.ColumnSpan="2"/>
+        <Label x:Name="botLine" Visibility="Visible" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="38,385,0,0" Grid.ColumnSpan="2"/>
+        <Label x:Name="topLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="424" Height="7" Background="Black" Margin="38,74,0,0" Grid.ColumnSpan="2"/>
         <Label x:Name="leftColLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Center" Width="6" Height="402" Background="Black" Margin="79,0,0,0" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -55,7 +59,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="midColLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="6" Height="402" Background="Black" Margin="244,38,0,0" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="midColLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="6" Height="402" Background="Black" Margin="238,38,0,0" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -65,7 +69,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="rightColLine" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="6" Height="402" Background="Black" Margin="400,38,0,0" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="rightColLine" Visibility="Visible" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="6" Height="402" Background="Black" Margin="93,38,0,0" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -76,8 +80,8 @@
             </Label.RenderTransform>
         </Label>
 
-        <Grid/>
-        <Label x:Name="diagLine1" Visibility="Visible" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="528" Height="7" Background="Black" Margin="-31,234,0,0" RenderTransformOrigin="0.5,0.5">
+        <Grid Grid.ColumnSpan="2"/>
+        <Label x:Name="diagLine1" Visibility="Visible" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="528" Height="7" Background="Black" Margin="-31,234,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -87,7 +91,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="diagLine2" Visibility="Hidden" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Width="528" Height="7" Background="Black" Margin="0,234,0,0" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="diagLine2" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="528" Height="7" Background="Black" Margin="-14,234,0,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

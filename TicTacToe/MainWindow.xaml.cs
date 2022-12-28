@@ -28,17 +28,7 @@ namespace TicTacToe
 
         public MainWindow()
         {
-            // Initialize the game board to be empty
-            for (int row = 0; row < 3; row++)
-            {
-                for (int col = 0; col < 3; col++)
-                {
-                    board[row, col] = "";
-                }
-            }
-
             listIndex = new List<int>();
-
             InitializeComponent();
             NewGame();
         }
@@ -52,6 +42,7 @@ namespace TicTacToe
                 results[i] = MarkType.Free;
             }
 
+            playerTurn = true; // true is player1
             playerTurn = true; // true is player1
 
             // iterates through every button on the grid
@@ -75,19 +66,29 @@ namespace TicTacToe
 
                 listIndex.Clear(); // clear index
 
+                // Initialize the game board to be empty
+                for (int row = 0; row < 3; row++)
+                {
+                    for (int col = 0; col < 3; col++)
+                    {
+                        board[row, col] = "";
+                    }
+                }
+
             });
 
             gameEnd = false;
         }
 
-        private void AiMove(Button button) // easy opponent
+        private void AiMove() // easy opponent
         {
             bool available = true;
 
+            CheckForWinner();
+            if (gameEnd == true) return;
+
             while (available)
             {
-                CheckForWinner();
-
                 Random rnd = new Random();
                 int row = rnd.Next(0, 3);
                 int col = rnd.Next(0, 3);
@@ -103,7 +104,7 @@ namespace TicTacToe
                     computerButton.Foreground = Brushes.Red;
                     computerButton.Content = "X";
 
-                    playerTurn = true; 
+                    playerTurn = true;
                     available = false;
                 }
             }
@@ -124,7 +125,7 @@ namespace TicTacToe
             }
 
             var button = (Button)sender; // explicit cast to button
-            
+
             int col = Grid.GetColumn(button);
             int row = Grid.GetRow(button);
 
@@ -132,19 +133,24 @@ namespace TicTacToe
 
             if (results[index] != MarkType.Free) return;
 
-            
+
             if (playerTurn)
             {
                 results[index] = playerTurn ? MarkType.Cross : MarkType.Nought; // cell value based on player turn
                 listIndex.Add(index);
                 board[row, col] = "O";
+                
                 button.Content = "O";
                 button.Foreground = Brushes.Blue;
-                playerTurn = false; // when clicked switches turn
-                
-                AiMove(button);
-            }
 
+                playerTurn = false; // when clicked switches turn
+
+                if (listIndex.Count != 9)
+                {
+                    AiMove();
+                }
+            }
+            
             CheckForWinner();
         }
 
@@ -154,10 +160,13 @@ namespace TicTacToe
             CheckVerticalWins();
             CheckDiagonalWins();
 
+            if (gameEnd == true) return;
+
             if (!results.Any(item => item == MarkType.Free))
             {
                 gameEnd = true;
-                IterateThroughGrid(); // checks for no winner
+                MessageBox.Show("Draw");
+                NewGame();
             }
         }
 
@@ -170,19 +179,11 @@ namespace TicTacToe
             }
         }
 
-        private void IterateThroughGrid()
-        {
-            Container.Children.Cast<Button>().ToList().ForEach(button =>
-            {
-                button.Background = Brushes.Gray;
-            });
-        }
-
         private void CheckDiagonalWins()
         {
             var diag1 = ((results[0] & results[4] & results[8]) == results[0]);
             var diag2 = ((results[2] & results[4] & results[6]) == results[2]);
-            
+
             if (results[0] != MarkType.Free && diag1) // checks diagonal wins
             {
                 gameEnd = true;
