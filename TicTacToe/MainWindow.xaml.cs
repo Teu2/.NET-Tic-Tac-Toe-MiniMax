@@ -35,6 +35,7 @@ namespace TicTacToe
             scores = new();
             scores.Add("X", 1);
             scores.Add("O", -1);
+            scores.Add("Tie", 0);
             scores.Add("", 0);
 
             //bestMove = new Pair();
@@ -138,7 +139,7 @@ namespace TicTacToe
                     if (board[r, c] == "")
                     {
                         board[r, c] = "X";
-                        var score = MiniMax(0, true);
+                        var score = MiniMax(false);
                         board[r, c] = "";
 
                         if (score > bestScore)
@@ -152,7 +153,6 @@ namespace TicTacToe
             }
 
             var index = pair.Col + (pair.Row * 3);
-            
 
             if (IsAvailable(index))
             {
@@ -206,6 +206,7 @@ namespace TicTacToe
                 {
                     //AiMove();
                     AiBestMove();
+                    //FindBestMove();
                 }
             }
             
@@ -315,11 +316,10 @@ namespace TicTacToe
 
         // MiniMax functions =========================================================================================================
 
-        private int MiniMax(int depth, bool isMaximisingPlayer)
+        private int MiniMax(bool isMaximisingPlayer)
         {
             int score;
-            var result = MMCheckBoard();
-            
+            string result = MMCheckBoard();
 
             if (result != null)
             {
@@ -336,7 +336,7 @@ namespace TicTacToe
                         if(MMIsAvailable(r, c))
                         { 
                             board[r, c] = "X";
-                            score = MiniMax(depth + 1, false);
+                            score = MiniMax(false);
                             board[r, c] = "";
                             bestScore = Math.Max(score, bestScore);
                         }
@@ -354,7 +354,7 @@ namespace TicTacToe
                         if (MMIsAvailable(r, c))
                         {
                             board[r, c] = "O";
-                            score = MiniMax(depth + 1, true);
+                            score = MiniMax(true);
                             board[r, c] = "";
                             bestScore = Math.Min(score, bestScore);
                         }
@@ -363,7 +363,7 @@ namespace TicTacToe
                 return bestScore;
             }
         }
-
+       
         private bool MMIsAvailable(int r, int c)
         {
             if (board[r, c] == "") return true;
@@ -372,40 +372,71 @@ namespace TicTacToe
 
         private string MMCheckBoard()
         {
-            string val = "";
+            string winner = null;
             // check rows
             for (int row = 0; row < 3; row++)
             {
-                if (board[row, 0] == board[row, 1] && board[row, 1] == board[row, 2])
+                if (board[row, 0] == board[row, 1] && board[row, 1] == board[row, 2] && (board[row, 0] == "X" || board[row, 0] == "O"))
                 {
-                    val = board[row, 0]; return val;
+                    winner = board[row, 0];
                 }
             }
 
             // check columns
             for (int col = 0; col < 3; col++)
             {
-                if (board[0, col] == board[1, col] && board[1, col] == board[2, col])
+                if (board[0, col] == board[1, col] && board[1, col] == board[2, col] && (board[col, 0] == "X" || board[col, 0] == "O"))
                 {
-                    val = board[0, col]; return val;
+                    winner = board[0, col];
                 }
             }
 
             // check diagonals
-            if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2])
+            if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && (board[0, 0] == "X" || board[0, 0] == "O"))
             {
-                val = board[0, 0]; return val;
+                winner = board[0, 0];
             }
 
-            if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0])
+            if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && (board[0, 2] == "X" || board[0, 2] == "O"))
             {
-                val = board[0, 2]; return val;
+                winner = board[0, 2];
             }
 
-            return val;
+            if (winner == null && MMCheckAvailableSpots() == 0) return "Tie";
+            return winner;
         }
 
-        private int MMCheckBoard1()
+        private int MMCheckAvailableSpots()
+        {
+            int val = 0;
+
+            for (int r = 0; r < 3; r++)
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    if (board[r, c] == "") val++;
+                }
+            }
+            return val;
+
+        }
+
+        // MiniMax2 Functions ==============================================================================================
+
+        private bool IsMovesLeft()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (board[i, j] == "") return true;
+                }
+            }
+                
+            return false;
+        }
+
+        private int Evaluate()
         {
             // check rows
             for (int row = 0; row < 3; row++)
@@ -450,5 +481,92 @@ namespace TicTacToe
 
             return 0;
         }
+    
+        private int MiniMax2(int depth, bool isMax)
+        {
+            int score = Evaluate();
+
+            if (score == 10) return score;
+            if (score == -10) return score;
+            if (IsMovesLeft() == false) return 0;
+
+            if (isMax)
+            {
+                int best = int.MinValue;
+                for (int r = 0; r < 3; r++)
+                {
+                    for (int c = 0; c < 3; c++)
+                    {
+                        if (board[r,c] == "")
+                        {
+                            board[r, c] = "X";
+                            best = Math.Max(best, MiniMax2(depth + 1, !isMax));
+                            board[r, c] = "";
+                        }
+                    }
+                }
+                return best;
+            }
+            else
+            {
+                int best = int.MaxValue;
+                for (int r = 0; r < 3; r++)
+                {
+                    for (int c = 0; c < 3; c++)
+                    {
+                        if (board[r, c] == "")
+                        {
+                            board[r, c] = "O";
+                            best = Math.Max(best, MiniMax2(depth + 1, !isMax));
+                            board[r, c] = "";
+                        }
+                    }
+                }
+                return best;
+            }
+        }
+
+        private void FindBestMove()
+        {
+            int bestVal = int.MinValue;
+            Pair bestMove = new Pair();
+
+            for (int r = 0; r < 3; r++)
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    if (board[r, c] == "")
+                    {
+                        board[r, c] = "X";
+                        int moveVal = MiniMax2(0, false);
+                        board[r, c] = "";
+
+                        if(moveVal > bestVal)
+                        {
+                            bestVal = moveVal;
+                            bestMove.Row = r;
+                            bestMove.Col = c;
+                        }
+                    }
+                }
+            }
+
+            var index = bestMove.Col + (bestMove.Row * 3);
+
+            if (IsAvailable(index))
+            {
+                board[bestMove.Row, bestMove.Col] = "X";
+                results[index] = playerTurn ? MarkType.Cross : MarkType.Nought; // cell value based on player turn
+                listIndex.Add(index);
+
+                Button computerButton = (Button)Container.Children[bestMove.Row * 3 + bestMove.Col];
+                computerButton.Foreground = Brushes.Red;
+                computerButton.Content = "X";
+
+                playerTurn = true;
+            }
+
+        }
     }
+
 }

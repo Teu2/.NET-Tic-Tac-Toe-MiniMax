@@ -1,2 +1,1 @@
-﻿add MiniMax algorithm
-https://www.youtube.com/watch?v=l-hh51ncgDI&t=5s&ab_channel=SebastianLague
+﻿Finish off MiniMax Algorithm
