@@ -1,5 +1,6 @@
 # .NET Tic Tac Toe
-Tic Tac Toe WPF application in C# .NET 6.0, MiniMax was implemented using the pseudocode below learned during part of an AI course.
+Tic Tac Toe WPF application in C# .NET 6.0 
+- MiniMax was implemented using the pseudocode below learnt during part of an AI course.
 
 **MiniMax Algorithm Pseudocode**
 ```
