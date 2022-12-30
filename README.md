@@ -3,6 +3,7 @@ Tic Tac Toe WPF application in C# .NET 6.0
 - MiniMax was implemented using the pseudocode below learnt during part of an AI course.
 
 **MiniMax Algorithm Pseudocode**
+
 ```
 function  minimax( node, depth, maximizingPlayer ) is
     if depth = 0 or node is a terminal node then
