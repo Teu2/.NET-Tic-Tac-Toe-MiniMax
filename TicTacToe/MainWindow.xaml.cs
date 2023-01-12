@@ -38,8 +38,6 @@ namespace TicTacToe
             scores.Add("Tie", 0);
             scores.Add("", 0);
 
-            //bestMove = new Pair();
-            //bestScore = int.MinValue;
             InitializeComponent();
             NewGame();
         }
@@ -53,7 +51,7 @@ namespace TicTacToe
                 results[i] = MarkType.Free;
             }
 
-            playerTurn = true; // true is player1
+            playerTurn = false; // true is player1
 
             // iterates through every button on the grid
             Container.Children.Cast<Button>().ToList().ForEach(button =>
@@ -77,7 +75,6 @@ namespace TicTacToe
                 listIndex.Clear(); // clear index
 
                 bestMove = new Pair();
-                //bestScore = int.MinValue;
                 
                 // Initialize the game board to be empty
                 for (int row = 0; row < 3; row++)
@@ -92,6 +89,7 @@ namespace TicTacToe
 
             MMGameEnd = false;
             gameEnd = false;
+            AiBestMove();
         }
 
         private void AiMove() // not really an AI
@@ -336,7 +334,7 @@ namespace TicTacToe
                         if(MMIsAvailable(r, c))
                         { 
                             board[r, c] = "X";
-                            score = MiniMax(false);
+                            score = MiniMax(!isMaximisingPlayer);
                             board[r, c] = "";
                             bestScore = Math.Max(score, bestScore);
                         }
@@ -354,7 +352,7 @@ namespace TicTacToe
                         if (MMIsAvailable(r, c))
                         {
                             board[r, c] = "O";
-                            score = MiniMax(true);
+                            score = MiniMax(!isMaximisingPlayer);
                             board[r, c] = "";
                             bestScore = Math.Min(score, bestScore);
                         }
@@ -417,8 +415,8 @@ namespace TicTacToe
                     if (board[r, c] == "") val++;
                 }
             }
-            return val;
 
+            return val;
         }
     }
 
