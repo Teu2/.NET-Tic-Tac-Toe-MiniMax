@@ -89,7 +89,7 @@ namespace TicTacToe
 
             MMGameEnd = false;
             gameEnd = false;
-            AiBestMove();
+            AiBestMove(); 
         }
 
         private void AiMove() // not really an AI
@@ -122,7 +122,7 @@ namespace TicTacToe
             }
         }
 
-        private void AiBestMove() // partially working fix it
+        private void AiBestMove() // fixed
         {
             var bestScore = int.MinValue;
             Pair pair = new(); // Best Move
